@@ -19,10 +19,10 @@ const tipPerPerson = tipAmount / numberOfPeople;
 const totalPerPerson = totalAmount / numberOfPeople;
 
 //display results with 2 decimal places
-document.getElementById("tipAmount").textContent = `francs cfa${tipAmount.toFixed(2)}`;
-document.getElementById("totalAmount").textContent = `francs cfa${totalAmount.toFixed(2)}`;
-document.getElementById("tipPerPerson").textContent = `francs cfa${tipPerPerson.toFixed(2)}`;
-document.getElementById("totalPerPerson").textContent = `francs cfa${totalPerPerson.toFixed(2)}`;
+document.getElementById("tipAmount").textContent = `francs cfa ${tipAmount.toFixed(2)}`;
+document.getElementById("totalAmount").textContent = `francs cfa ${totalAmount.toFixed(2)}`;
+document.getElementById("tipPerPerson").textContent = `francs cfa ${tipPerPerson.toFixed(2)}`;
+document.getElementById("totalPerPerson").textContent = `francs cfa ${totalPerPerson.toFixed(2)}`;
 }
 
 // add event listener to the calculate button
