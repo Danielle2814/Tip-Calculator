@@ -21,44 +21,43 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-[#050114] flex flex-col items-center sm:gap-12">
-    <h1 class="text-[4rem] text-[#5656b1] font-bold pt-20">Split & Share</h1>
-    <p class="text-[1.75rem] text-[#e3e4f8] text-center pt-5">
+  <body class="bg-[#050114] flex flex-col items-center min-h-screen px-4 py-8 gap-6 sm:gap-12">
+    <h1 class="text-3xl sm:text-5xl md:text-6xl text-[#5656b1] font-bold pt-6 sm:pt-12 text-center overflow-hidden">Split & Share</h1>
+    <p class="text-lg sm:text-xl md:text-2xl text-[#e3e4f8] text-center max-w-3xl px-2">
       The smart way to calculate and split bills with friends. Perfect to dining
       out, group activities, or share expenses get instant calculations with
       fair splits and details breakdowns.
     </p>
-    <div class="w-3/4 sm:flex sm:gap-11 sm:justify-center pt-10 pb-8">
+    <div class="w-full max-w-6xl flex flex-col lg:flex-row gap-6 sm:gap-8 lg:gap-11 justify-center pt-4 sm:pt-8 pb-8">
       <!-- premiere division du bord -->
 
       <div
-        class="border border-gray-50 sm:w-2/5 mt-10 p-5 rounded-2xl flex flex-col gap-12 shadow-2xs bg-[#020008] pb-9"
+        class="w-full lg:w-2/5 p-4 sm:p-6 rounded-2xl flex flex-col gap-6 sm:gap-8 shadow-2xl bg-[#020008] border border-gray-50"
       >
-        <div class="flex flex-col gap-3">
+        <div class="flex flex-col gap-2 sm:gap-3">
           <label
             for="billAmount"
-            class="text-[#e3e4f8] text-2xl flex items-center gap-3"
+            class="text-[#e3e4f8] text-lg sm:text-2xl flex items-center gap-2 sm:gap-3"
           >
-            <ion-icon name="calendar-clear-outline"></ion-icon>BILL
-            AMOUNT</label
+            <ion-icon name="calendar-clear-outline"></ion-icon><span>BILL AMOUNT</span></label
           >
           <input
             type="text"
             id="billAmount"
             placeholder="Enter the total bill amount"
-            class="border text-[#e3e4f8] rounded-xl p-3 bg-[#050114] text-2xl"
+            class="border text-[#e3e4f8] rounded-xl p-3 bg-[#050114] text-base sm:text-2xl focus:outline-none focus:border-[#5656b1] transition-colors"
           />
         </div>
-        <div class="flex flex-col gap-3">
+        <div class="flex flex-col gap-2 sm:gap-3">
           <label
             for="servicerating"
-            class="text-[#e3e4f8] text-2xl flex items-center gap-3"
+            class="text-[#e3e4f8] text-lg sm:text-2xl flex items-center gap-2 sm:gap-3"
           >
-            <ion-icon name="star-outline"></ion-icon>SERVICE RATING</label
+            <ion-icon name="star-outline"></ion-icon><span>SERVICE RATING</span></label
           >
           <select
             id="servicerating"
-            class="border rounded-xl text-[#e3e4f8] p-3 bg-[#050114] text-2xl"
+            class="border rounded-xl text-[#e3e4f8] p-3 bg-[#050114] text-base sm:text-2xl focus:outline-none focus:border-[#5656b1] transition-colors"
           >
             <option value="0.2">Exceptional -20%</option>
             <option value="0.15">Good -15%</option>
@@ -67,76 +66,75 @@
           </select>
         </div>
 
-        <div class="flex flex-col gap-3">
+        <div class="flex flex-col gap-2 sm:gap-3">
           <label
             for="numberOfPeople"
-            class="text-[#e3e4f8] text-2xl flex items-center gap-3"
-            ><ion-icon name="people-outline"></ion-icon>NUMBER OF PEOPLE</label
+            class="text-[#e3e4f8] text-lg sm:text-2xl flex items-center gap-2 sm:gap-3"
+            ><ion-icon name="people-outline"></ion-icon><span>NUMBER OF PEOPLE</span></label
           >
           <input
             type="number"
             id="numberOfPeople"
             value="1"
             min="1"
-            class="border rounded-xl text-[#e3e4f8] p-3 bg-[#050114] text-2xl"
+            class="border rounded-xl text-[#e3e4f8] p-3 bg-[#050114] text-base sm:text-2xl focus:outline-none focus:border-[#5656b1] transition-colors"
           />
         </div>
         <button
-          class="bg-[#5656b1] px-8 py-8 rounded-xl text-[#e3e4f8] text-2xl flex items-center gap-3 justify-center"
+          class="bg-[#5656b1] px-6 sm:px-8 py-4 sm:py-8 rounded-xl text-[#e3e4f8] text-lg sm:text-2xl flex items-center justify-center gap-2 sm:gap-3 hover:bg-[#4242a0] transition-colors w-full"
           id="calculateBtn"
         >
           <ion-icon name="calculator-outline"></ion-icon>
-          Calculate Split
+          <span>Calculate Split</span>
         </button>
       </div>
 
       <!-- deuxieme division du bord -->
 
       <div
-        class="sm:w-3/5 mt-10 p-5 rounded-2xl flex flex-col gap-5 bg-[#020008] border border-gray-50 items-center pb-9"
+        class="w-full lg:w-3/5 p-4 sm:p-6 rounded-2xl flex flex-col gap-4 sm:gap-5 bg-[#020008] border border-gray-50 items-center"
       >
-        <h3 class="text-[#e3e4f8] text-4xl py-5 font-bold">Breakdown</h3>
-        <div class="flex gap-11">
+        <h3 class="text-[#e3e4f8] text-2xl sm:text-3xl md:text-4xl py-3 sm:py-5 font-bold">Breakdown</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 w-full">
           <div
-            class="border border-gray-50 sm:py-7 flex flex-col items-center bg-[#050114] rounded-2xl gap-3 w-50 sm:w-100"
+            class="border border-gray-50 p-4 sm:p-6 flex flex-col items-center bg-[#050114] rounded-2xl gap-3"
           >
-            <p class="text-xl text-[#e3e4f8]">Tip amount</p>
-            <div class="text-5xl font-bold text-[#6565ad] py-6" id="tipAmount">
+            <p class="text-base sm:text-lg md:text-xl text-[#e3e4f8]">Tip amount</p>
+            <div class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#6565ad] py-3 sm:py-6" id="tipAmount">
               $0.00
             </div>
           </div>
 
           <div
-            class="border border-gray-50 sm:py-7 flex flex-col items-center bg-[#050114] rounded-2xl gap-3 w-50 sm:w-100"
+            class="border border-gray-50 p-4 sm:p-6 flex flex-col items-center bg-[#050114] rounded-2xl gap-3"
           >
-            <p class="text-xl text-[#e3e4f8]">Total Bill</p>
+            <p class="text-base sm:text-lg md:text-xl text-[#e3e4f8]">Total Bill</p>
             <div
-              class="text-5xl font-bold text-[#6565ad] py-6"
+              class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#6565ad] py-3 sm:py-6"
               id="totalAmount"
             >
               $0.00
             </div>
           </div>
-        </div>
 
-        <div class="flex gap-11">
           <div
-            class="border border-gray-50 sm:py-7 flex flex-col items-center bg-[#050114] rounded-2xl gap-3 w-50 sm:w-100"
+            class="border border-gray-50 p-4 sm:p-6 flex flex-col items-center bg-[#050114] rounded-2xl gap-3"
           >
-            <p class="text-xl text-[#e3e4f8]">per Person</p>
+            <p class="text-base sm:text-lg md:text-xl text-[#e3e4f8]">Tip per Person</p>
             <div
-              class="text-5xl font-bold text-[#6565ad] py-6"
+              class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#6565ad] py-3 sm:py-6"
               id="tipPerPerson"
             >
               $0.00
             </div>
           </div>
+
           <div
-            class="border border-gray-50 sm:py-7 flex flex-col items-center bg-[#050114] rounded-2xl gap-3 w-50 sm:w-100"
+            class="border border-gray-50 p-4 sm:p-6 flex flex-col items-center bg-[#050114] rounded-2xl gap-3"
           >
-            <p class="text-xl text-[#e3e4f8]">Total per Person</p>
+            <p class="text-base sm:text-lg md:text-xl text-[#e3e4f8]">Total per Person</p>
             <div
-              class="text-5xl font-bold text-[#6565ad] py-6"
+              class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#6565ad] py-3 sm:py-6"
               id="totalPerPerson"
             >
               $0.00
