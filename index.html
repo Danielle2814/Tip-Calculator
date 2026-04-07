@@ -25,8 +25,8 @@
     <h1 class="text-[4rem] text-[#5656b1] font-bold pt-20">Split & Share</h1>
     <p class="text-[1.75rem] text-[#e3e4f8] text-center pt-5">
       The smart way to calculate and split bills with friends. Perfect to dining
-      out, group activities, or share expenses get instant calculations
-      with fair splits and details breakdowns.
+      out, group activities, or share expenses get instant calculations with
+      fair splits and details breakdowns.
     </p>
     <div class="w-3/4 sm:flex sm:gap-11 sm:justify-center pt-10 pb-8">
       <!-- premiere division du bord -->
@@ -39,7 +39,8 @@
             for="billAmount"
             class="text-[#e3e4f8] text-2xl flex items-center gap-3"
           >
-            <ion-icon name="calendar-clear-outline"></ion-icon>BILL   AMOUNT</label
+            <ion-icon name="calendar-clear-outline"></ion-icon>BILL
+            AMOUNT</label
           >
           <input
             type="text"
@@ -55,7 +56,10 @@
           >
             <ion-icon name="star-outline"></ion-icon>SERVICE RATING</label
           >
-          <select id="servicerating" class="border rounded-xl text-[#e3e4f8] p-3 bg-[#050114] text-2xl">
+          <select
+            id="servicerating"
+            class="border rounded-xl text-[#e3e4f8] p-3 bg-[#050114] text-2xl"
+          >
             <option value="0.2">Exceptional -20%</option>
             <option value="0.15">Good -15%</option>
             <option value="0.1">Fair -10%</option>
@@ -70,13 +74,16 @@
             ><ion-icon name="people-outline"></ion-icon>NUMBER OF PEOPLE</label
           >
           <input
-            type="text"
+            type="number"
             id="numberOfPeople"
+            value="1"
+            min="1"
             class="border rounded-xl text-[#e3e4f8] p-3 bg-[#050114] text-2xl"
           />
         </div>
         <button
           class="bg-[#5656b1] px-8 py-8 rounded-xl text-[#e3e4f8] text-2xl flex items-center gap-3 justify-center"
+          id="calculateBtn"
         >
           <ion-icon name="calculator-outline"></ion-icon>
           Calculate Split
@@ -94,14 +101,21 @@
             class="border border-gray-50 sm:py-7 flex flex-col items-center bg-[#050114] rounded-2xl gap-3 w-50 sm:w-100"
           >
             <p class="text-xl text-[#e3e4f8]">Tip amount</p>
-            <div class="text-5xl font-bold text-[#6565ad] py-6">$0.00</div>
+            <div class="text-5xl font-bold text-[#6565ad] py-6" id="tipAmount">
+              $0.00
+            </div>
           </div>
 
           <div
             class="border border-gray-50 sm:py-7 flex flex-col items-center bg-[#050114] rounded-2xl gap-3 w-50 sm:w-100"
           >
             <p class="text-xl text-[#e3e4f8]">Total Bill</p>
-            <div class="text-5xl font-bold text-[#6565ad] py-6">$0.00</div>
+            <div
+              class="text-5xl font-bold text-[#6565ad] py-6"
+              id="totalAmount"
+            >
+              $0.00
+            </div>
           </div>
         </div>
 
@@ -110,13 +124,23 @@
             class="border border-gray-50 sm:py-7 flex flex-col items-center bg-[#050114] rounded-2xl gap-3 w-50 sm:w-100"
           >
             <p class="text-xl text-[#e3e4f8]">per Person</p>
-            <div class="text-5xl font-bold text-[#6565ad] py-6">$0.00</div>
+            <div
+              class="text-5xl font-bold text-[#6565ad] py-6"
+              id="tipPerPerson"
+            >
+              $0.00
+            </div>
           </div>
           <div
             class="border border-gray-50 sm:py-7 flex flex-col items-center bg-[#050114] rounded-2xl gap-3 w-50 sm:w-100"
           >
-            <p class="text-xl text-[#e3e4f8]">To per Person</p>
-            <div class="text-5xl font-bold text-[#6565ad] py-6">$0.00</div>
+            <p class="text-xl text-[#e3e4f8]">Total per Person</p>
+            <div
+              class="text-5xl font-bold text-[#6565ad] py-6"
+              id="totalPerPerson"
+            >
+              $0.00
+            </div>
           </div>
         </div>
       </div>
