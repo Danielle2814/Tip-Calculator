@@ -29,6 +29,8 @@ document.getElementById("totalPerPerson").textContent = `$${totalPerPerson.toFix
 
 document.getElementById("calculateBtn").addEventListener("click", calculateTip);
 
-// add event to calculate automatically when pressing enter in any input field
+// add event to calculate automatically when any input value changes
 
-// document.querySelectorAll("input, select").forEach(element => {)
+document.querySelectorAll("input, select").forEach(element => {
+    element.addEventListener("input", calculateTip);
+});
